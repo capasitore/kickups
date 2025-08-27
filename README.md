@@ -1,8 +1,24 @@
 # Kick-up Counter with Real-time Ball Detection
 
-A Python-based computer vision system that automatically counts football kick-ups by detecting ball-foot contact using pose estimation and object detection. The system provides real time visualization with distance tracking and kick counting.
+A computer vision system that automatically counts football kick-ups by detecting ball-foot contact using pose estimation and object detection. Available in both Python (desktop) and iOS (mobile) versions with real-time visualization and kick counting.
 
 ![Kick-up Counter Demo](thumbnail.png)
+
+## 🚀 Available Platforms
+
+### 🐍 Python Version (Desktop)
+- **File**: `main.py`
+- **Platform**: Windows, macOS, Linux
+- **Features**: YOLO v11 ball detection, OpenCV processing, video file support
+- **Use Case**: Development, testing, high-performance processing
+
+### 📱 iOS Version (Mobile)
+- **Directory**: `KickupCounter.xcodeproj/`
+- **Platform**: iPhone, iPad (iOS 17.0+)
+- **Features**: On-device Vision framework, Core ML, real-time camera processing
+- **Use Case**: Mobile app, real-time training, portable kick counting
+
+📖 **See [iOS_README.md](iOS_README.md) for detailed iOS app documentation**
 
 ## Overview
 
@@ -24,14 +40,16 @@ This project provides tools to:
 - **Cooldown System**: Prevents double-counting rapid successive contacts
 - **Resizable Display**: Adjustable window for different screen sizes
 
-## 🗃️ Installation
+## 🗃️ Installation & Setup
+
+### Python Version (Desktop)
 
 ```bash
 git clone https://github.com/donsolo-khalifa/Kickups.git
 cd Kickups
 ```
 
-### Requirements
+#### Requirements
 
 ```bash
 pip install -r requirements.txt
@@ -44,11 +62,20 @@ mediapipe
 cvzone
 ultralytics
 numpy
-```
+ultralytics
+numpy
+### iOS Version (Mobile)
+
+1. **Open in Xcode**: Open `KickupCounter.xcodeproj` in Xcode 15.0+
+2. **Select Device**: Choose your iPhone/iPad (iOS 17.0+)
+3. **Build & Run**: Camera access will be requested on first launch
+4. **Real-time Detection**: Point camera at kick-up activity
+
+📖 **For detailed iOS setup instructions, see [iOS_README.md](iOS_README.md)**
 
 ## 📋 Usage
 
-### Basic Usage
+### Python Version - Basic Usage
 
 1. **Prepare your video**: Place your kick-up video file in the project directory
 2. **Update video path**: Modify `VIDEO_PATH` in the script to point to your video
@@ -58,6 +85,14 @@ numpy
    ```
 4. **View results**: The system will display real time kick counting and distance tracking
 5. **Exit**: Press 'q' to quit and see final count
+
+### iOS Version - Basic Usage
+
+1. **Launch App**: Open the Kickup Counter app
+2. **Grant Permissions**: Allow camera access when prompted
+3. **Position Camera**: Point rear camera toward the kick-up area
+4. **Start Detection**: Tap the play button to begin counting
+5. **View Results**: See real-time count and distance visualization
 
 ### Configuration
 
